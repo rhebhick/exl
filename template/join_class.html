@@ -1,0 +1,79 @@
+{% extends "cmnstudent.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<style>
+    .table{
+        padding: 10px 20px;
+    }
+    .space{
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 10px;
+    }
+</style>
+<br><br>
+    <div>
+    <table class="table" border="1">
+        <tr>
+            <th>
+                no.
+            </th>
+            <th>
+                class
+            </th>
+            <th>
+                day
+            </th>
+            <th>
+                batch
+            </th>
+            <th>
+                subject
+            </th>
+            <th>
+                link
+            </th>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>
+                {{forloop.counter}}
+            </td>
+            <td>
+                {{d.classes.classes}}
+            </td>
+            <td>
+                {{d.day}}
+            </td>
+            <td>
+                {{d.batch.batch_starting_time}} - {{d.batch.batch_ending_time}}
+            </td>
+            <td>
+                {{d.department.department.name}}
+            </td>
+            <td>
+                {% if d.classlink %}
+                        
+                <a href="{{d.classlink}}" class="btn">
+                    join </a>
+            {% else %}
+                <a  class="btn">
+                   Not added
+                </a>
+            {% endif %}
+            </td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+</div>
+{% if messages %}
+{% for m  in messages %}
+<script>
+    alert("{{m}}")
+</script>
+{% endfor %}
+{% endif %}
+{% endblock content %}
+
+

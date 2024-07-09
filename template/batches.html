@@ -1,0 +1,75 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<style>
+.classes{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+.inn{
+    margin-left: 35%;
+    background-color:dodgerblue;
+    width: 40%;
+    padding-inline: 10rem;
+    padding-block: 10vh;
+    border-radius: 10px;
+}
+.sbtn{
+    margin-left: 30%;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.clsview{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content:space-around ;
+}
+.batch_add{
+    margin-top: -20vh;
+    background-color: white;
+    padding: 10px 20px ;
+    border-radius: 8px;
+
+}
+.box{
+    border: 1;
+    background-color: white;
+    box-shadow: 0px 0px 6px 0px black;
+}
+.clsview{
+    margin-top: 1.5vh;
+    
+}
+th,td{
+    padding: 10px 20px;
+}
+</style>
+<div class="classes">
+<form action="" method="post">
+    {% csrf_token %}
+    <br><br><br>
+    <div class="inn">
+        <a href="/add_batches" class="batch_add">add batches</a>
+        <h3>currently we have :</h3   >
+            {% for d in data %}
+            <table class="clsview">
+            
+            <tr class="box">
+                <th>{{d.batch_title}}</th> 
+                <td>{{d.batch_starting_time}}</td>
+                <td>{{d.batch_ending_time}}</td>
+                <td><a href="/batch_edit?id={{d.id}}">edit</a> </td>
+                <td><a href="/delete_batch?id={{d.id}}"><span class="material-symbols-outlined">
+                    delete
+                    </span></a></td>
+                </tr>
+         </table>
+         {% endfor %}
+
+    </div>
+</form>
+</div>
+
+    
+
+{% endblock content %}

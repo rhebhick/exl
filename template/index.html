@@ -1,0 +1,353 @@
+{% extends "cmnpage.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+FR+Trad:wght@100..400&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css" integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    @keyframes ani1 {
+        from {
+            transform: translateX(-100rem);
+    
+        }
+    
+        to {
+            transition: translate(900rem);
+        }
+    }
+    
+    
+    .admission {
+        /* transition: .5s; */
+        animation-name: ani1;
+        animation-duration: .8s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: 0s;
+        color: dodgerblue;
+        width: 30%;
+        margin-left: 20%;
+        margin-top: 15vh;
+        font-family: "Playwrite FR Moderne", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-shadow: 0px 3px 0px rgb(7, 146, 23);
+        letter-spacing: 4px;
+    }
+    .for {
+        /* transition: .5s; */
+        animation-name: ani1;
+        animation-duration: .7s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: .7s;
+        color: dodgerblue;
+        width: 30%;
+        margin-left: 20%;
+        font-family: "Playwrite FR Moderne", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-shadow: 0px 3px 0px rgb(7, 146, 23);
+        letter-spacing: 4px;
+    
+    
+    }
+    
+    .eleventh {
+        animation-name: ani1;
+        animation-duration: .7s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: 1.4s;
+        color: dodgerblue;
+        width: 1vw;
+        margin-left: 20%;
+        font-family: "Playwrite FR Moderne", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-shadow: 0px 3px 0px rgb(7, 146, 23);
+        letter-spacing: 4px;
+    }
+    
+    .is {
+        animation-name: ani1;
+        animation-duration: .7s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: 1.6s;
+        color: dodgerblue;
+        width: 1vw;
+        margin-left: 20%;
+        font-family: "Playwrite FR Moderne", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-shadow: 0px 3px 0px rgb(7, 146, 23);
+        letter-spacing: 4px;
+    }
+    
+    .open {
+        animation-name: ani1;
+        animation-duration: .7s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: 2.1s;
+        color: dodgerblue;
+        width: 30%;
+        margin-left: 20%;
+        font-family: "Playwrite FR Moderne", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-shadow: 0px 3px 0px rgb(7, 146, 23);
+        letter-spacing: 4px;
+    }
+    
+    .regtoday {
+        animation-name: ani1;
+        animation-duration: .7s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: both;
+        animation-delay: 2.7s;
+        width: 30%;
+        margin-left: 20%;
+        padding: 10px 20px;
+        background-color: dodgerblue;
+        color: white;
+        width: 15vw;
+        text-align: center;
+        transition: .2s;
+        margin-top: 5vh;
+    }
+    
+    .regtoday:hover {
+        filter: brightness(120%);
+    }
+    
+    h2,
+    h3:hover {
+        text-decoration: none;
+    }
+    
+    .admitadd {
+        border: 2px;
+        background-color: transparent;
+    }
+    
+    .maindiv {
+    
+        padding-bottom: 5vh;
+        padding-top: .1vh;
+        /* background-image: linear-gradient(green,black);*/
+        background-blend-mode: overlay;
+        height: 80vh;
+        background-image: url('static\\media\\bgimg2.jpg');
+        background-attachment: fixed;
+    }
+    
+    .link {
+        background-color: transparent;
+        width: 40vw;
+    }
+    
+    .link:hover {
+        text-decoration: none;
+    }
+    
+    .flx {
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    
+    .thumb {
+        margin-top: 10vh;
+        filter: brightness(120%) contrast(110%);
+        text-shadow: 0px 0px 2px 0px black;
+    
+    }
+    
+    .ring1 {
+        background-image: url(static\media\bluering-removebg-preview.png);
+    
+    }
+    .stats-container{
+    
+    justify-content: center;
+    gap: 1rem;
+    padding-left:0rem;
+    width: 94.5%;
+    
+    }
+    .trophy{
+        margin-top: 10vh;
+        margin-left: 15%;
+    }
+    .ourfe{
+        margin-top: 5vh;
+        margin-left: 9vw;
+    }
+    .courfe{
+        display: grid;
+        grid-template-columns: 33vw 33vw;
+        margin-left: 12vw;
+        height: 40vh;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .medal{
+        margin-top: 34vh;
+        margin-left: -10vh;
+    }
+    @keyframes shadow{
+        from{
+            box-shadow: 0px 0px 0px 0px;
+        }
+        to{
+            box-shadow: 0px 0px 8px 0px red;
+        }
+    }
+    .note{
+        text-align: center;
+        animation-name: shadow;
+        animation-duration: .5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-delay: .01s;
+        animation-fill-mode: both;
+        width: 90%;
+        border-radius: 10px;
+        margin-left: 7%;
+        margin-top: -10vh;
+        margin-bottom: 3vh;
+
+    }
+
+</style>
+
+<body>
+
+
+    <br><br><br>
+    <section>
+        <div class="maindiv">
+            <div class="admitad"><a href="/signup" class="link">
+                    <div class="flx">
+                        <div>
+                            <h2 class="admission">ADMISSION</h2>
+                            <h3 class="for">for</h3>
+                            <h3 class="eleventh">11th</h3>
+                            <h3 class="is">is</h3>
+                            <h2 class="open">OPEN!!</h2>
+                            <h5 class="regtoday">REGISTER TODAY</h5>
+                        </div>
+                       
+                </a>
+                <img src="static\media\cropped_image.png" alt="" height="400vh" class="thumb">
+            </div>
+
+        </div>
+        </div>
+        <div class="gridc">
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-container">
+        <div class="stat">
+            <div class="students-odometer odometer plus">0</div>
+            <div class="type">full a+(offline batch)</div>
+        </div>
+        <div class="stat">
+            <div class="teachers-odometer odometer plus">0</div>
+            <div class="type">full a+(online batch)</div>
+        </div>
+        <div class="stat">
+            <div class="experiance-odometer odometer">0</div>
+            <div class="type">year of experiance</div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/js/main.js"></script> 
+    <br><br>
+    <div>
+        <section style="display: flex;" class="section"> 
+            <img src="static\media\trophy.png" height="80vh" class="trophy" alt="">
+            <img src="static\media\medal.png" height="80vh" class="medal" alt="">
+            <div>
+                <h4 class="ourfe">Our Features</h4>
+                <div class="courfe">
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4 >The most effective live interactive online class</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Daily exams with full alertness assuring students have studied</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Interesting classes using light board, video's, slides and animations</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Monthly progress card with sufficient details and contact with parents</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Five revision will be successfully completed every year</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Multiple intelligence promotion</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>Heart to heart communications from experienced, energized young teachers</h4>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        select_check_box
+                        </span>
+                        <h4>yoga pranayama meditations for learning enhancement</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+    </div >
+    <div class='note'><h2>note - we only provide classes for +1 and +2 bio-maths students .</h2>
+    </div>
+{% if messages %}
+{% for m  in messages %}
+<script>
+    alert("{{m}}")
+</script>
+{% endfor %}
+{% endif %}
+{% endblock content%}
+
+</body>

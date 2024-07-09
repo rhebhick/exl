@@ -1,0 +1,55 @@
+section{
+    height: 100vh;
+    margin-bottom: 0px;
+}
+.stats-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    margin-top: -10vh;
+    width: 100%;
+    gap: 12vh;
+
+    justify-content: space-evenly;
+    /*background-image: url('\\static\\media\\bgimg2.jpg');*/
+
+}
+.stats-container .stat{
+    background-color:rgb(2, 2, 6);
+    border-radius: 6px;
+    padding: 24px;
+    text-align: center;
+    width: 90%;
+    padding-inline: 50px;
+    color: white;
+
+    padding-bottom: 16px;
+    color:dodgerblue;
+}
+.stats-container .stat .odometer{
+    font-size: 6vh;
+    font-weight: bold;
+    display: inline-block;
+    width: 30vw;
+}
+.stats-container .stat .type{
+    font-size: medium;
+    margin-left: 5rem;
+}
+.odometer.plus{
+    position: relative;
+}
+.odometer.plus::after{
+    content: '';
+    color: dodgerblue;
+    position: absolute;
+    top: 0;
+    font-size: 5vh;
+    margin-left: 25;
+}
+@media (max-width:700px){
+    .stats-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}

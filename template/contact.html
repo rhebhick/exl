@@ -1,0 +1,186 @@
+{% extends "cmnpage.html" %}
+{% block content %}
+<style>
+    .headbox {
+        height: 23vh;
+        width: 100%;
+        background-color: rgb(48, 150, 253);
+        background-image: url("static\\media\\bluepattern.jpg");
+        background-blend-mode: soft-light;
+        text-align: center;
+        color: white;
+        padding-top: 7vh;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        text-align: center;
+        justify-content: space-around;
+        padding-top: 10vh;
+        font-size: larger;
+        color: dodgerblue;
+        margin-bottom: 10vh;
+    }
+
+    .contact_c_h {
+        color: black;
+        font-size: medium;
+    }
+
+    .contact_c_inn {
+        background-color: dodgerblue;
+        color: white;
+        width: 10vw;
+        font-size: 30px;
+        font-weight: lighter;
+        border-radius: 8px;
+        transition: .5s;
+        padding-block: 1vh;
+    }
+
+    .contact_c_inn:hover {
+        filter: brightness(120%);
+        color: white;
+        text-decoration: none;
+    }
+
+    .contact_a {
+        color: white;
+    }
+
+    .contact_a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .contact_c {
+        font-size: 10vh;
+    }
+
+    .address_bg_1 {
+        height: 80vh;
+        background-color: rgb(233, 234, 238);
+        margin-bottom: 10vh;
+
+    }
+
+    .address_bg_in {
+        background-color: white;
+        height: 60vh;
+        width: 70%;
+        margin-left: 15%;
+        transform: translateY(10vh);
+        display: grid;
+        grid-template-columns: auto auto;
+
+
+    }
+
+    #add_ic {
+        background-color: dodgerblue;
+        color: white;
+        clip-path: circle();
+        padding: 5px;
+        margin-left: 10%;
+    }
+    #add_ic1 {
+        background-color: dodgerblue;
+        color: white;
+        clip-path: circle();
+        padding: 5px;
+        margin-left: -16%;
+    }
+
+    .our_add {
+        margin-left: 10%;
+    }
+
+    .address_c1 {
+        display: flex;
+        margin-left: 6%;
+    }
+
+    .add_c_name {
+        margin-left: 5%;
+    }
+
+    .innnn {
+        font-weight: lighter;
+    }
+
+    .map {
+        margin-top: 2.5vh;
+    }
+    .add_inn_1{
+        display: block;
+        
+    }
+</style>
+<div class="headbox">
+    <h1>GET IN TOUCH</h1>
+</div>
+<div class="contact">
+    <div class="contact_c">
+        <i class="fa fa-facebook-official" aria-hidden="true" class="contact_icon"></i><br>
+        <span class='contact_icon_size'>
+            <h3 class="contact_c_h">follow on FB</h3>
+        </span>
+        <h4 class="contact_c_inn"><a href="" class="contact_a">follow</a></h4>
+    </div>
+    <div class="contact_c">
+        <i class="fa fa-instagram" aria-hidden="true" id="envelop"></i><br>
+        <span class='contact_icon_size'>
+            <h3 class="contact_c_h">follow on insta</h3>
+        </span>
+        <h4 class="contact_c_inn"><a href="" class="contact_a">follow</a></h4>
+    </div>
+    <div class="contact_c">
+        <i class="fa fa-youtube-play" aria-hidden="true"></i><br>
+        <span class='contact_icon_size'>
+            <h3 class="contact_c_h">follow on youtube</h3>
+        </span>
+        <h4 class="contact_c_inn"><a href="" class="contact_a">follow</a></h4>
+    </div>
+
+</div>
+<div class="address_bg_1">
+    <div class="address_bg_in">
+        <div class="address_c">
+            <h2 class="our_add">OUR ADDRESS</h2><br>
+            <div class="address_c1">
+                <h3 class="add_inn_1">
+                    <span class="material-symbols-outlined" id="add_ic">
+                        location_on
+                    </span>
+                    <h3 class="add_c_name">EXL LEARNING
+                        <br>
+                        <p class="innnn">Annamanada KK road,mala
+                            <br>
+                            PIN:680741 <br>
+                        </p><br>
+                        <span class="material-symbols-outlined" id="add_ic1">
+                            call
+                            </span>
+                    phn:991919292 <br><br>
+                    <span class="material-symbols-outlined" id="add_ic1">
+                        mail
+                        </span>
+                    email:exl@gmail.com <br> </h3>
+                </h3>
+            </div>
+        </div>
+        <div>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31410.046819788146!2d76.30305260848505!3d10.24093725212029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080386ce17c155%3A0xd09307c757c60235!2sAnnamanada%2C%20Kerala%20680741!5e0!3m2!1sen!2sin!4v1718940756314!5m2!1sen!2sin"
+                width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

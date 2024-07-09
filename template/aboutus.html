@@ -1,0 +1,109 @@
+{% extends "cmnpage.html" %}
+{% block content %}
+<style>
+
+    .headbox {
+        height: 23vh;
+        width: 100%;
+        background-color: rgb(48, 150, 253);
+        background-image: url("static\\media\\bluepattern.jpg");
+        background-blend-mode: soft-light;
+        text-align: center;
+        color: white;
+        padding-top: 6vh;
+    }
+
+    .immg {
+        height: 45vh;
+    }
+
+    .immg.vision {
+        margin-left: 2%;
+    }
+
+    .abtcntnt {
+        display: flex;
+
+    }
+
+    .abt_c_in {
+        padding-inline: 10vw;
+        padding-top: 10vh;
+    }
+
+    .abt_c_in_value {
+        padding-inline: 10vw;
+        padding-top: 2vh;
+    }
+    h4,h3{
+        font-weight: lighter;
+        line-height: 5vh;
+    }
+</style>
+<div>
+    <div class="headbox">
+        <h1>VISION, MISSION AND VALUES</h1>
+    </div>
+    <br><br>
+    <div class="abtcntnt">
+        <img src="static\media\about_us\vision.png" alt="" class="immg vision">
+        <div class="abtin">
+            <div class="abt_c_in">
+                <h1 class="abth">OUR VISION</h1>
+                <h3 class="abtc">We helps every higher secondary students in Indian to attain high scores in board
+                    exams.</h3>
+            </div>
+        </div>
+    </div>
+    <div class="abtcntnt">
+
+        <div class="abtin">
+            <div class="abt_c_in">
+                <h1 class="abth">OUR MISSION</h1>
+                <h3 class="abtc">
+                    We aims to establish India's preferred academies of excellence <br>
+                    for cracking the highersecondary exams through:
+                    <br><br>
+                    <ol>
+                        <li> Innovative Technologies</li>
+                        <li> Top class faculties</li>
+                        <li>One to one mentoring</li>
+                        <li>In house course materials and Q Bank</li>
+                        <li>Hybrid classrooms.</li>
+                    </ol>
+                </h3>
+            </div>
+        </div>
+        <img src="static/media/about_us/mission.png" alt="" class="immg mission">
+    </div>
+    <br><br>
+    <div class="abtcntnt">
+        <img src="static\media\about_us\values.png" alt="" class="immg vision">
+        <div class="abtin">
+            <div class="abt_c_in_value">
+                <h1 class="abth">OUR VALUES</h1>
+                <div style="text-align: left;">
+                    <h2>COMPETITIVE</h2>
+                    <h4>We live with the same competitive spirit as that of our students and aim to be ahead in all that
+                        we do.</h4>
+                    <h2>COMPETENT</h2>
+                    <h4>We constantly endeavor to enhance our skills, knowledge and ability to impart quality education
+                        with state of the art technology and infrastructure.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="abtcntnt" style="padding-inline: 10vw;">
+                <div style="text-align: left;">
+                    <h2>CARE</h2>
+                    <h4>We care for everyone we engage with and respect them for their personal and professional worth without any bias. Everything we do is done with consideration of its impact on and for the people.</h4>
+                </div>
+                <div>
+                    <h2>COMMITMENT</h2>
+                    <h4>We are committed to meet the expectation and trust of the people who join us in our endeavor to develop the community.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

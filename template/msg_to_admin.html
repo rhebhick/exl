@@ -1,0 +1,71 @@
+
+{% extends alink %}
+{% block content %}
+<style>
+    .class{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .input{
+        width: 100%;
+        text-transform: lowercase;
+    }
+    .inn{
+        margin-left: 35%;
+        background-color:dodgerblue;
+        width: 30%;
+        padding-inline: 10rem;
+        padding-block: 20vh;
+        border-radius: 10px;
+    }
+    .sbtn{
+        margin-left: 30%;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    .current{
+        background-color: white;
+        height: 40vh;
+    }
+    .msghead{
+        text-align: center;
+        color: red;
+    }
+    .material-symbols-outlined{
+        font-size: medium;
+        margin-top: .3vh;
+        margin-left: 2%;
+    }
+</style>
+<div class="class">
+    <form action="" method="post">
+        {% csrf_token %}
+        <br><br><br>
+        <div class="inn">
+            <textarea name="msg_s" class="form-control input" id="" placeholder="type your message here " required></textarea><br>
+
+            <input type="submit" class="sbtn"><br><br>
+            <div class="current">
+                <p class="msghead">current messages</p>
+                <p>
+                    {% for d in data %}
+                    <ul>
+                        <li>{{d.content}}<a href="/dltmsg?id={{d.id}}&url=msg_to_admin"><span class="material-symbols-outlined">
+                            delete
+                            </span></a></li>
+                    </ul>
+                    {% endfor %} 
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock content %}
+
+
+
+

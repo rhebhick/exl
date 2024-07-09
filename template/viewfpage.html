@@ -1,0 +1,23 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<style>
+    .disply{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .move{
+        width: 30%;
+        margin-left: 40%;
+    }
+</style>
+<div class="disply"><br><br><br>
+    <div class="move">
+    <a href="/viewstudent" class="btn">students</a>
+    <a href="/viewteacher" class="btn">teachers</a>
+    </div>
+</div>
+
+{% endblock content %}
+
+

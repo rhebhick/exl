@@ -1,0 +1,146 @@
+{% extends "cmnpage.html" %}
+{% block content %}
+<style>
+    .headbox {
+        height: 23vh;
+        width: 100%;
+        background-color: rgb(48, 150, 253);
+        background-image: url("static\\media\\bluepattern.jpg");
+        background-blend-mode: soft-light;
+        text-align: center;
+        color: white;
+        padding-top: 7vh;
+    }
+
+    .course_head {
+        text-align: center;
+        font-weight: lighter;
+
+    }
+
+    .course_c {
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+
+    }
+
+    .course_c_1 {
+        width: 75%;
+        padding: 10px;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        border-radius: 5px;
+        transition: .2s;
+    }
+
+
+    .course_c_1:hover {
+        transform: translateY(-20px);
+    }
+
+
+
+    h3 {
+        font-weight: lighter;
+    }
+
+    .course_batch_head {
+        text-align: center;
+        font-weight: lighter;
+    }
+
+    .course_d {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: 20%;
+
+
+    }
+
+    .course_d_1 {
+        width: 55%;
+        padding: 10px;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        border-radius: 5px;
+        margin-bottom: 10vh;
+        transition: .2s;
+    }
+
+    .course_d_1:hover {
+        transform: translateY(-20px);
+    }
+
+    .course_f{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: 20%;
+
+    }
+    .course_f_1{
+        width: 55%;
+        padding: 10px;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        border-radius: 5px;
+        margin-bottom: 10vh;
+        transition: .2s;
+    }
+    .course_f_2{
+        width: 55%;
+        padding: 10px;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        border-radius: 5px;
+        margin-bottom: 10vh;
+        transition: .2s;
+    }
+    .course_f_1:hover {
+        transform: translateY(-20px);
+    }
+    .course_f_2:hover {
+        transform: translateY(-20px);
+    }
+
+</style>
+<div class="headbox">
+    <h1>COURSES</h1>
+</div>
+<h1 class="course_head">Courses that currently available</h1><br><br>
+<div class="course_c">
+    {% for d in data %}
+    <div class="course_c_1">
+        <h2>{{d.classes}}</h2>
+        <h3>{{d.desc}} </h3>
+    </div>
+    {% endfor %}<br><br>
+</div>
+<div>
+    <h1 class="course_batch_head">Batches and time</h1><br><br>
+    <div class="course_d">
+        {% for d in data2 %}
+        <div class="course_d_1">
+            <h2>{{d.batch_title}}</h2>
+            <h3>{{d.batch_starting_time}} - {{d.batch_ending_time}} </h3>
+        </div>
+        {% endfor %}
+    </div><br><br>
+    <h1 class="course_head">fees details</h1><br><br>
+    <div class="course_f">
+        <div class="course_f_1">
+            <h2><span class="material-symbols-outlined">
+                    currency_rupee
+                </span>10k only/-</h2>
+            <h3>for +1 students. <br>
+                (scholarships will be provided according to the performance.)</h3>
+
+
+        </div>
+        <div class="course_f_2">
+            <h2><span class="material-symbols-outlined">
+                    currency_rupee
+                </span>15k only/-</h2>
+            <h3>for +2 students. <br>
+                (scholarships will be provided according to the performance.)</h3>
+        </div>
+    </div>
+
+        {% endblock content %}

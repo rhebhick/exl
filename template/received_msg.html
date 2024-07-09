@@ -1,0 +1,48 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+
+<style>
+    .table{
+        padding: 10px 20px;
+    }
+</style>
+<div>
+    <h2>messages that you received</h2>
+    <table border="1" class="table">
+        <tr>
+            <th>
+                no.
+            </th>
+            <th>
+                msg
+            </th>
+            <th>
+                user type
+            </th>
+            <th>
+                sent by
+            </th>
+        </tr>
+        {% for d in data %}
+        <td>
+            {{forloop.counter}}
+
+        </td>
+        <td>
+            {{d.content}}
+        </td>
+        <td>
+            {{d.user_type}}
+        </td>
+        <td>
+            {{d.sent_by}}
+        </td>
+        {% endfor %}
+    </table>
+</div>
+
+
+{% endblock content %}
+
+
+

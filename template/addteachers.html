@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="\static\media\now.png" type="image/icon type">
+    <title>EXCEL</title>
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            background-image: url("static\\media\\login.jpg");
+            filter: brightness(80%);
+            background-size: cover;
+            text-align: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .inbox {
+            height: 80vh;
+            width: 80rem;
+            position: relative;
+            z-index: 1;
+            background: rgba(28, 28, 118, 0.242);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid #fff;
+            color: white;
+            font-size: larger;
+            margin-top: 5vh;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .inbox::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-radius: 10px;
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
+            z-index: -1;
+
+        }
+
+        .submit {
+            color: black;
+            border-radius: 10px;
+            padding: 7px 20px;
+            font-size: large;
+
+
+        }
+
+        .submit:hover {
+            box-shadow: 0px 0px 8px dodgerblue;
+        }
+
+        .cntnt {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .form-control {
+            margin-top: 4vh;
+        }
+
+        .end a {
+            color: dodgerblue;
+            filter: brightness(120%);
+        }
+        .select{
+            color: black;
+        }
+        .cselect{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backg">
+        <div class="inbox">
+            <h1>Add here</h1>
+            <br>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="cntnt">
+                    <input type="text" name="firstname" placeholder="First Name" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="text" name="lastname" placeholder="Last Name" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <div  style="display: flex;"><span style="margin-top: 4.5vh;margin-left:7rem;">DOB :</span> <input type="date" name="dob" placeholder="dob" class="form-control"
+                        style="width: 50%; margin-left:10%" required></div>
+                    <input type="email" name="email" placeholder="email" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="text" name="plustwo" placeholder="board of highersecondary " class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="number" name="mark_plustwo" placeholder="HSE percentage obtained" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="text" name="degree" placeholder="degree your have" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="text" name="score" placeholder="score in degree" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="password" name="password" placeholder="password" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                    <input type="password" name="checkpassword" placeholder="re-enter password" class="form-control"
+                        style="width: 80%; margin-left:10%" required>
+                </div><br>
+                <div class="select"><span class="cselect">select your department : </span><select name="department" id="" >
+                    {% for d in data %}
+                        <option value="{{ d.id }}">{{ d.name }}</option>
+                    {% endfor %}
+                    </select></div><br><br>
+                <input type="submit" class="submit">
+            </form>
+
+        </div>
+    </div>
+    <!-- {%if messages%}
+        <script>
+            alert('{{messages}}');
+        </script>
+    {%endif%} -->
+
+</body>

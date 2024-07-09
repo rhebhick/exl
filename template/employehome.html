@@ -1,0 +1,89 @@
+{% extends "cmnemployee.html" %}
+{% block content %}
+<style>
+    .employe_home{
+        display: flex;
+        background-image:url("static\\media\\bgimg.jpg") ;
+        height: 80vh;
+        filter: brightness(80%);
+        background-size: cover;
+       
+    }
+    .ahc{
+        width: 30%;
+        height: 60vh;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10vh;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        background: rgba(4, 4, 66, 0.242);
+        border-radius: 10px;
+        border: 1px solid #fff;
+        color: white;
+        font-size: larger;
+        margin-top: 5vh;
+        justify-content: center;
+    
+    }
+
+    .ahc::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        border-radius: 10px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        z-index: -1;
+
+    }
+    #overflow{
+        overflow: auto;
+    }
+    .sbtn{
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+    .sbtn:hover{
+        background-color: white;
+        color: dodgerblue;
+    }
+</style>
+<div class="employe_home">
+    <div class="ahc" id="overflow">
+        <h3>Messages for you</h3>
+        {% for d in msg_by_admin %}
+        <ul>
+            <li>{{d.sent_by}} - {{d.content}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="ahc"><br><br>
+        <a href="/msg_to_student" class="sbtn">sent msg to student</a><br><br><br><br>
+        <a href="/msg_to_admin" class="sbtn">sent msg to admin</a><br><br><br><br>
+        <a href="/profile_tr" class="sbtn">view your profile</a><br><br>
+
+    </div>
+    <div class="ahc">
+        <h3>you have classes on</h3>
+        <ul>
+        {% for c in classes %}
+            <li>
+                {{c.day}} - ({{c.batch.batch_starting_time}}-{{c.batch.batch_ending_time}})
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% if messages %}
+{% for m  in messages %}
+<script>
+    alert("{{m}}")
+</script>
+{% endfor %}
+{% endif %}
+{% endblock content %}

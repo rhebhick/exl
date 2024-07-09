@@ -1,0 +1,60 @@
+{% extends "cmnemployee.html" %}
+{% block content %}
+<style>
+    .height{
+        height: 90vh;
+        background-image: url("/static/media/login.jpg");
+        filter: brightness(80%);
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        line-height: 2vh;
+    }
+    .inbox {
+        height: 80vh;
+        width: 80rem;
+        position: relative;
+        z-index: 1;
+        background: rgba(28, 28, 118, 0.242);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: 1px solid #fff;
+        color: rgb(237, 230, 230);
+        font-size: larger;
+        margin-top: 1vh;
+        text-align: center;
+        justify-content: center;
+        margin-left: 25%;
+
+    }
+
+    .inbox::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        border-radius: 10px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        z-index: -1;
+
+    }
+</style>
+<div class="height"><br>
+    <div class="inbox">
+        <h2>Profile</h2><br><br><br>
+        <h4>name : {{data.first_name}} {{data.last_name}}</h4>
+        <h4>Department : {{data.department.name}}</h4>
+        <h4>DOB : {{data.dob}}</h4>
+        <h4>Email : {{data.email}}</h4>
+        <h4>HSE board : {{data.hse_board}}</h4>
+        <h4>HSE percent : {{data.hse_percent}}</h4>
+        <h4>degree : {{data.degree}}</h4>
+        <h4>degree score : {{data.score}}</h4>
+        <h4>joined date : {{data.joined_date}}</h4><br><br><br>
+        <a href="/employehome" class="btn">back</a>
+    </div>
+</div>
+
+{% endblock content %}
+
+

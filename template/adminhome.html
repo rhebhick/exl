@@ -1,0 +1,83 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<style>
+    .admin_home{
+        display: flex;
+        background-image:url("static\\media\\bgimg.jpg") ;
+        height: 80vh;
+        filter: brightness(80%);
+        background-size: cover;
+       
+    }
+    .ahc{
+        width: 30%;
+        height: 60vh;
+        box-shadow: 0px 0px 4px 0px dodgerblue;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10vh;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        background: rgba(4, 4, 66, 0.242);
+        border-radius: 10px;
+        border: 1px solid #fff;
+        color: white;
+        font-size: larger;
+        margin-top: 5vh;
+        justify-content: center;
+
+    }
+
+    .ahc::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        border-radius: 10px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        z-index: -1;
+
+    }
+    .sbtn{
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+    .sbtn:hover{
+        background-color: white;
+        color: dodgerblue;
+    }
+
+</style>
+<div class="admin_home">
+    <div class="ahc">
+        <h1>Student</h1><br>
+        <h4><a href="/signupta" class="sbtn">add </a></h4><br><br>
+        <h4 > <a href="/msg_to_student" class="sbtn">notification</a></h4><br><br>
+        <h4><a href="/viewstudent" class="sbtn">view</a></h4>
+    </div>
+    <div class="ahc">
+        <h1> Teachers</h1><br>
+        <h4><a href="/addteacher" class="sbtn">add </a></h4><br><br>
+        <h4 > <a href="/msg_to_teacher" class="sbtn">notification</a></h4><br><br>
+        <h4><a href="/viewteacher" class="sbtn">view</a></h4>
+    </div>
+    <div class="ahc">
+       <h3>DEPARTMENTS</h3> <br>
+        <h4><a href="/adddepartment" class="sbtn">add</a></h4><br><br>
+       <h4><a href="/incharge" class="sbtn">Department incharge </a></h4><br><br>
+       <h4><a href="/batches" class="sbtn">batches</a></h4><br><br>
+       <h4 ><a href="/classes"class="sbtn">  classes</a></h4>
+
+    </div>
+</div>
+{% if messages %}
+{% for m  in messages %}
+<script>
+    alert("{{m}}")
+</script>
+{% endfor %}
+{% endif %}
+{% endblock content %}

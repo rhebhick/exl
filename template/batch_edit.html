@@ -1,0 +1,45 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<style>
+    .batch{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .input{
+        width: 100%;
+        text-transform: lowercase;
+    }
+    .inn{
+        margin-left: 35%;
+        background-color:dodgerblue;
+        width: 30%;
+        padding-inline: 10rem;
+        padding-block: 10vh;
+        border-radius: 10px;
+    }
+    .sbtn{
+        margin-left: 30%;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+
+</style>
+<div class="batch">
+    <form action="" method="post">
+        {% csrf_token %}
+        <br>
+        <div class="inn">
+            <h3>Batch Name </h3   >
+            <input type="text" name="title" value="{{data.batch_title}}" class="form-control input" ><br>
+            <h4>Time</h4>
+            <p>starting: <input type="time" value="{{data.batch_starting_time}}" name="starting_time"></p>
+            <p>ending: <input type="time" value="{{data.batch_ending_time}}" name="ending_time"></p>
+                      <input type="submit" class="sbtn">
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

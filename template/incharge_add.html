@@ -1,0 +1,50 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<style>
+    .department{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .input{
+        width: 100%;
+        text-transform: lowercase;
+    }
+    .inn{
+        margin-left: 35%;
+        background-color:dodgerblue;
+        width: 30%;
+        padding-inline: 10rem;
+        padding-block: 10vh;
+        border-radius: 10px;
+    }
+    .sbtn{
+        margin-left: 30%;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+
+</style>
+<div class="department">
+    <form action="" method="post">
+        {% csrf_token %}
+        <br>
+        <div class="inn">
+            <h4>Department Name:{{data2.department.name}}</h4>
+            <p class="tselect">headname : <select name="departhead" id="">
+                {% for d in data %}
+                <option value="{{ d.id }}">{{d.first_name}} {{d.last_name}}</option>
+                {% endfor %}
+            </select></p><br><br>
+                      <input type="submit" class="sbtn">
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock content %}
+
+
+

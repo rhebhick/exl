@@ -1,0 +1,67 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav{
+    text-align: center;
+    font-size: small;
+    text-align: center;
+    width: 100%;
+    padding-top:3vh;
+    padding-bottom:1vh;
+}
+.in_nav{
+    text-decoration: none;
+    margin-left: 1%;
+    color: dodgerblue;
+}
+.in_nav:hover{
+    color: rgb(5, 238, 160);
+    filter: brightness(90%);
+}
+.img{
+    height: 10vh;
+}
+#login{
+    margin-left: 7%;
+}
+.btn{
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem 2rem;
+    margin-left: 2%;
+    font-size:medium;
+    text-decoration: none;
+
+}
+.btn:hover{
+    background-color: rgb(5, 238, 160);
+    /* background-color:darkcyan; */
+}
+/* @keyframes ani1{
+    from{
+        transform: translateX(-100px);
+        
+    }
+    to{
+        transition:translate(300px);
+    }
+} */
+.admission{
+    /* transition: .5s; */
+    /* animation-name: ani1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: 0s; */
+    color: dodgerblue;
+
+}
+.create-dropdown{
+    display: hidden;
+}
+@media(max-width:700px){
+    .create-dropdown{
+        color: dodgerblue;
+        position:relative;
+    }
+}

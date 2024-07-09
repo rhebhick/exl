@@ -1,0 +1,53 @@
+{% extends "cmnadmin.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+    .batch{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        color: rgb(11, 3, 38);
+    }
+    .input{
+        width: 100%;
+        text-transform: lowercase;
+    }
+    .inn{
+        margin-left: 35%;
+        background-color:dodgerblue;
+        width: 30%;
+        padding-inline: 10rem;
+        padding-block: 10vh;
+        border-radius: 10px;
+    }
+    .sbtn{
+        margin-left: 30%;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+</style>
+<div class="batch">
+    <form action="" method="post">
+        {% csrf_token %}
+        <br><br><br>
+        <div class="inn"> 
+            <input type="text" name="batch_head" placeholder="enter batch heading" class="form-control input">
+            <h3>add time</h3>
+            <div>starting time : <input type="time" name="stime" placeholder="hr.min">
+            </div><br>
+            <div>ending time : <input type="time" name="etime" placeholder="hr.min">
+            <br><br>
+            <input type="submit" class="sbtn">
+        </div>
+    </form>
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
