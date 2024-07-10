@@ -494,7 +494,7 @@ def msg_to_admin(request):
             id=request.session['uid']
             dt=Students.objects.get(id=id)
             name=dt.first_name +' '+ dt.last_name
-            ta=To_msg.objects.create(content=msg,to_student=True,to_teacher=False,to_admin=False,user_type='student',sent_by=name)
+            ta=To_msg.objects.create(content=msg,to_student=False,to_teacher=True,to_admin=True,user_type='student',sent_by=name)
             ta.save()
         return render(request,'msg_to_admin.html',{"data":data,'alink':alink})
     return render(request,'msg_to_admin.html')
@@ -523,11 +523,17 @@ def dltmsg(request):
         data=To_msg.objects.get(id=id)
         data.delete()
         return redirect(f"/{url}")
+    elif typ=='student':
+        id=request.GET['id']
+        url=request.GET['url']
+        data=To_msg.objects.get(id=id)
+        data.delete()
+        return redirect(f"/{url}")
 @login_required(login_url=("/"))
 def received_msg(request):
     typ=request.session['type']
     if typ=='admin':
-        data=To_msg.objects.filter(to_admin=True)
+        data=To_msg.objects.filter(to_admin=True).order_by("user_type")
         return render(request,'received_msg.html',{'data':data})
 @login_required(login_url=('/'))
 def employehome(request):

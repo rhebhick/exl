@@ -57,13 +57,13 @@
 </style>
 <div class="employe_home">
     <div class="ahc" id="overflow"> <br>
-        <a href="" class="sbtn"> sent message</a>
+        <a href="/msg_to_admin" class="sbtn"> sent message</a>
         <h3>Messages for you</h3>
         {% for d in msg%}
         <ul>
             <li>{{d.sent_by}} - {{d.content}}</li>
         </ul>
-        <br><br>
+        
       
         {% endfor %}
 

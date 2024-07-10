@@ -24,19 +24,22 @@
             </th>
         </tr>
         {% for d in data %}
-        <td>
-            {{forloop.counter}}
+        <tr>
 
-        </td>
-        <td>
-            {{d.content}}
-        </td>
-        <td>
-            {{d.user_type}}
-        </td>
-        <td>
-            {{d.sent_by}}
-        </td>
+            <td>
+                {{forloop.counter}}
+                
+            </td>
+            <td>
+                {{d.content}}
+            </td>
+            <td>
+                {{d.user_type}}
+            </td>
+            <td>
+                {{d.sent_by}}
+            </td>
+        </tr>
         {% endfor %}
     </table>
 </div>
